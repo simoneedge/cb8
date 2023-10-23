@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Html - css</title>
+    <meta name="description" content="Corso html css" />
+    <meta name="keywords" content="Edgemony, html, css, corso, web" />
+  </head>
+  <body>
+    <p>Sono un paragrafo</p>
+    <p>Sono un paragrafo, <span>con un elemento span</span></p>
+    <p>Sono un paragrafo, <br /><span>con un elemento span</span></p>
+    <p>Sono un paragrafo, <br />con un tag br</p>
+
+    <!-- HEADING -->
+    <h1>Heading 1 (titolo della pagina)</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <!-- END HEADING -->
+
+    <!-- strong e br -->
+    <p>Sono il tag <strong>strong</strong></p>
+    <p>Sono il tag <b>b</b></p>
+    <!-- end strong e br -->
+
+    <!-- em e i -->
+    <p>Sono il tag <em>em</em></p>
+    <p>Sono il tag <i>i</i></p>
+    <!-- end em i -->
+
+    <!-- altri tag di testo -->
+    <p>Ciao sono il <mark>tag mark</mark></p>
+    <p>Ciao sono il <ins>tag ins</ins></p>
+    <p>Ciao sono il <del>tag del</del></p>
+    <p>Ciao sono il <sup>tag sup</sup></p>
+    <p>Ciao sono il <sub>tag sub</sub></p>
+    <p>Ciao sono il <small>tag small</small></p>
+    <!-- end altri tag di testo -->
+
+    <!-- elenchi puntati -->
+    <ul>
+      <li>Primo</li>
+      <li>Secondo</li>
+      <li>...</li>
+      <li>Ultimo</li>
+      <li>
+        <ul>
+          <li>Ultimo 2</li>
+          <li>Ultimo 3</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ol>
+      <li>Primo</li>
+      <li>Secondo</li>
+      <li>...</li>
+      <li>Ultimo</li>
+    </ol>
+
+    <dl>
+      <dt>Primo</dt>
+      <dd>descrizione del primo elemento</dd>
+      <dt>Secondo</dt>
+      <dd>descrizione del secondo elemento</dd>
+    </dl>
+
+    <!-- end elenchi puntati -->
+
+    <!-- tag link anchor -->
+
+    <a href="https://edgemony.com" title="vai al sito edgemony">Vai al sito</a>
+
+    <a href="about.html" title="vai alla pagina chi siamo">About us</a>
+
+    <a
+      href="https://edgemony.com"
+      title="vai al sito edgemony"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Vai al sito</a
+    >
+
+    <!-- end tag link anchor -->
+
+    <!-- blockquote -->
+    <blockquote>Sono una citazione</blockquote>
+    <q>Sono una citazione</q>
+    <!-- blockquote -->
+
+    <!-- container -->
+    <div>
+      <div>Div</div>
+      <p>Paragraph</p>
+      <section>Section</section>
+      <article>Article</article>
+      <aside>aside</aside>
+      <nav>
+        <ul>
+          <li><a href="link 1" title="link 1">Link 1</a></li>
+          <li><a href="link 2" title="link 2">Link 2</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- end container -->
+
+    <!-- multimedia -->
+    <img
+      src="images/image.jpg"
+      alt="immagine dello spazio"
+      width="400"
+      height="400"
+    />
+
+    <figure>
+      <img
+        src="images/image.jpg"
+        alt="immagine dello spazio"
+        width="400"
+        height="400"
+      />
+      <figcaption>Immagine astronauta</figcaption>
+    </figure>
+
+    <!-- picture, utile per rappresentare diverse immagini in base al dispositivo -->
+    <picture>
+      <source
+        media="(min-width: 1920px)"
+        srcset="https://placehold.co/1000x1000"
+      />
+      <source
+        media="(min-width: 1440px)"
+        srcset="https://placehold.co/900x900"
+      />
+      <source
+        media="(min-width: 1024px)"
+        srcset="https://placehold.co/800x800"
+      />
+      <source media="(min-width: 0px)" srcset="https://placehold.co/400x400" />
+      <source media="min-width: 768px" srcset="https://placehold.co/600x600" />
+      <img
+        src="images/image.jpg"
+        alt="sono sempre l'astronauta"
+        width="400"
+        height="400"
+      />
+    </picture>
+    <!-- end picture -->
+
+    <!-- end multimedia -->
+  </body>
+</html>
