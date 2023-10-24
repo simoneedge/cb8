@@ -1,0 +1,73 @@
+h1 {
+  color: red;
+}
+
+p {
+  color: red;
+}
+
+p a {
+  color: yellow;
+  border: 1px solid green;
+  text-transform: uppercase;
+}
+
+div a {
+  color: green;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.banner {
+  background-color: green;
+}
+
+.allineamento-centrale {
+  text-align: center;
+}
+
+#banner-big,
+.allineamento-centrale {
+  background-color: purple;
+  margin: 20px;
+}
+
+input[type="text"] {
+  background-color: red;
+}
+
+input[type="password"] {
+  background-color: green;
+}
+
+.width-50 {
+  background: #903c3c;
+  width: 50%;
+}
+
+h1 {
+  width: 100%;
+  font-size: 58px;
+  font-weight: 100;
+  text-decoration: underline;
+  text-transform: capitalize;
+  letter-spacing: 10px;
+  word-spacing: 100px;
+}
+
+.full {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: yellow; */
+  color: rgb(177, 175, 255);
+  background-color: rgba(177, 175, 255, 0.3);
+  background-image: url("images/image.jpg");
+}
