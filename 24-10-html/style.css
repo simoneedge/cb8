@@ -64,10 +64,22 @@ h1 {
 }
 
 .full {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   /* background-color: yellow; */
   color: rgb(177, 175, 255);
   background-color: rgba(177, 175, 255, 0.3);
   background-image: url("images/image.jpg");
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: green;
+}
+
+a:visited {
+  color: violet;
 }
