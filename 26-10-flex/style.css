@@ -1,0 +1,35 @@
+.container-flex {
+  display: flex;
+  background-color: purple;
+  padding: 10px;
+  height: 400px;
+  /* flex-direction: row-reverse;
+  flex-wrap: wrap-reverse; */
+  /* flex-flow: row-reverse wrap-reverse; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  font-weight: bold;
+  font-size: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* margin: 0 20px; */
+}
+
+/* .box:first-child {
+  margin-left: 0;
+}
+
+.box:last-child {
+  margin-right: 0;
+} */
