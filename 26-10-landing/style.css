@@ -4,12 +4,13 @@
 /* #00004f */
 /* ******* */
 
-/* google font */
+/* importiamo google font */
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* reset */
 * {
   box-sizing: border-box;
+  /* azzeriamo margin e padding per rimuovere gli spazi di default del browser */
   margin: 0;
   padding: 0;
 }
@@ -19,6 +20,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* assegniamo display block a tutte le immagini per avere pieno controllo  */
 img {
   display: block;
 }
@@ -26,31 +28,33 @@ img {
 /* end reset */
 
 body {
-  font-size: 18px;
-  font-family: "Lexend", sans-serif;
+  font-size: 18px; /* dimensione font di default*/
+  font-family: "Lexend", sans-serif; /* assegnamo font family */
 }
 
 /* global */
 .container {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
+  max-width: 1440px; /* assegna una larghezza massima espressa in px */
+  width: 100%; /* larghezza sempre al 100%, quando la dimensione del display è inferiore alla grandezza massima assegnata occuperà tutto lo spazio */
+  margin: 0 auto; /* centra l'elemento assegnato con larghezza massima */
+
+  padding-left: 20px; /* spazio interno left e right per distanziare gli elementi dai bordi del display */
   padding-right: 20px;
 }
 
 .button {
-  display: inline-block;
-  padding: 20px 40px;
-  text-decoration: none;
-  border: 1px solid #f7f7f7;
-  border-radius: 10px;
-  color: #f7f7f7;
-  background-color: #00004f;
-  font-weight: bold;
-  transition: all 0.5s ease-in-out;
+  display: inline-block; /* Ci permette di avere un elemento inline ed avere la gestione dei margin e padding*/
+  padding: 20px 40px; /* spazi interni top bottom 20px, right e left 40px */
+  text-decoration: none; /* rimuoviamo la visualizzazione underline di default per i tipi link */
+  border: 1px solid #f7f7f7; /* aggiungiamo il bordo al pulsante */
+  border-radius: 10px; /* aggiungiamo il bordo arrotondanto */
+  color: #f7f7f7; /* colore del testo */
+  background-color: #00004f; /* background del pulsante */
+  font-weight: bold; /* font grassetto per il testo */
+  transition: all 0.5s ease-in-out; /* transition per effetto cambio colore e background in hover */
 }
 
+/* al passaggio del mouse sull'elemento button cambiamo colore e sfondo */
 .button:hover {
   background-color: #f7f7f7;
   color: #00004f;
@@ -91,85 +95,87 @@ h6 {
 
 /* HEADER */
 
+/* contenitore dell'intero header */
 .main-header {
   position: fixed;
   width: 100%;
   background-color: #00004f;
 }
 
+/* contenitore interno dell'header, ci permette di gestire la struttura in flex */
 .header-wrapper {
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 70px; /* altezza fissa dell'header */
+  display: flex; /* assegniamo flex per allineare gli elementi interni */
+  justify-content: space-between; /* elementi posizionati lasciando lo spazio interno */
+  align-items: center; /* allineiamo gli elementi verticalmente al centro */
 }
 
+/* navigazione menu header */
 .main-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  gap: 20px;
+  display: flex; /* assegniamo flex per allineare gli elementi interni in orizzontale */
+  flex-wrap: wrap; /* ci permette mandare "a capo" gli elementi che non entrano nello spazio assegnato */
+  list-style-type: none; /* azzeriamo lo stile di default degli elenchi puntati */
+  gap: 20px; /* spazio tra gli elementi interni */
 }
 
+/* link del menu */
 .main-nav a {
-  color: #f7f7f7;
-  text-decoration: none;
-  transition: color 0.35s ease;
+  color: #f7f7f7; /* colore del testo */
+  text-decoration: none; /* rimuoviamo la visualizzazione underline di default per i tipi link */
+  transition: color 0.35s ease; /* transition per effetto cambio colore in hover */
 }
 
+/* al passaggio del mouse sull'elemento link cambiamo colore */
 .main-nav a:hover {
   color: #56cfe1;
   text-decoration: none;
 }
-
 /* END HEADER */
 
 /* HERO */
 .hero {
-  width: 100%;
-  height: 100vh;
-  background-color: #00004f;
+  width: 100%; /* larghezza piena */
+  height: 100vh; /* altezza piena espressa in viewport height */
+  background-color: #00004f; /* colore di sfondo della sezione hero */
 }
 
+/* contenitore che ci permette di allineare gli elementi interni */
 .hero-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100%;
-  padding-top: 60px;
+  display: flex; /* flex per allineamento elementi */
+  align-items: center; /* allineamento verticale centrale */
+  justify-content: space-between; /* allineamento orizzontale con spazio centrale */
+  flex-wrap: wrap; /* andiamo "a capo" se gli elementi non entrano nello spazio */
+  height: 100%; /* altezza piena, prende il valore 100vh assegnato a .hero */
+  padding-top: 60px; /* spazio superiore, utile per mobile (azzeriamo il valore se necessario nelle media query) */
 }
 
+/* contenitore contenuto testuale sezione hero */
 .hero-text {
-  color: #f7f7f7;
-  width: 100%;
+  color: #f7f7f7; /* colore del testo della sezione hero */
+  width: 100%; /* larghezza piena per mobile, per altri dispositivi assegniamo valore nelle media query */
 }
 
 .hero-text .display {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* distanza inferiore rispetto agli altri elementi */
 }
 
 .hero-text span {
-  color: #56cfe1;
+  color: #56cfe1; /* cambiamo colore solo all'elemento span */
 }
 
+/* contenitore contenuto immagine sezione hero */
 .hero-image {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%; /* larghezza piena da mobile, per altri dispositivi assegniamo valore differente nelle media query */
+  display: flex; /* utile per allineare il contenuto immagine interno */
+  justify-content: center; /* allineamento centrale verticale immagine interna */
+  align-items: center; /* allineamento centrale orizzontale immagine interna */
 }
 
 .hero-description {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* distanza inferiore rispetto agli altri elementi */
 }
 
-.hero-image img {
-  width: 100%;
-  height: auto;
-  animation: anim-astronaut 2s ease-in-out infinite alternate;
-}
-
+/* animazione sezione hero */
 @keyframes anim-astronaut {
   0% {
     transform: translateY(0);
@@ -179,50 +185,62 @@ h6 {
   }
 }
 
+.hero-image img {
+  width: 100%; /* dimensioni 100% dell'immagine */
+  height: auto; /* ci permette di rispettare le proporzioni dell'immagine */
+  animation: anim-astronaut 2s ease-in-out infinite alternate; /* animazione "anim-astronaut" definita sopra */
+}
+/* end animazione sezione hero */
+
+/* media query  per responsive, dispositivi con dimensione minima orizzontale di 768px (da tablet in poi) */
 @media only screen and (min-width: 768px) {
   .hero-wrapper {
-    padding-top: 0;
+    padding-top: 0; /*  azzeriamo padding superiore assegnato per mobile */
   }
   .hero-text,
   .hero-image {
-    width: 50%;
+    width: 50%; /* larghezza al 50% per avere due colonne una di fianco all'altra per dispositivi non mobile */
   }
 }
 /* END HERO */
 
 /* SERVICES */
 .services {
-  width: 100%;
+  width: 100%; /* larghezza piena sezione services  */
 }
 
+/* contenitore elemento due colonne dei services */
 .services-wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: 100%; /*  larghezza piena  */
+  display: flex; /* flex per organizzare e distribuire gli elementi interni */
+  align-items: center; /*  allineamento verticale degli elementi */
+  justify-content: space-between; /* allineamento  orizzontale posizionando gli elementi a sinistra e a destra */
+  flex-wrap: wrap; /* "a capo" se l'elemento non rientra nello spazio */
 }
 
 .services-text {
-  width: 100%;
-  padding: 20px;
+  width: 100%; /* larghezza piena del contenuto testuale per mobile, modifichiamo il valore per altri dispositivi nelle media query */
+  padding: 20px; /* spazio interno top, right, bottom e left di 20px */
 }
 
 .services-image {
-  width: 100%;
+  width: 100%; /* larghezza piena del contenitore dell'immagine per mobile, modifichiamo il valore per altri dispositivi nelle media query */
 }
 
 .services-image img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  object-fit: cover; /* ci permette di adattare l'immagine all'interno spazio del contenitore */
+  width: 100%; /*  larghezza piena per l'immagine */
+  height: 100%; /*  altezza piena per l'immagine */
 }
 
+/* media query per responsive per dispositivi con larghezza minima di 768px, da tablet in poi */
 @media only screen and (min-width: 768px) {
   .services-text,
   .services-image {
-    width: 50%;
+    width: 50%; /* larghezza al 50% per le due colonne */
   }
+
+  /* per gli elementi dispari invertiamo la direzione della riga per visualizzare gli elementi alternati di immagine e testo  */
   .services-wrapper:nth-child(even) {
     flex-direction: row-reverse;
   }
