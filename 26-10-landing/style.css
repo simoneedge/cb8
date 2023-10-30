@@ -15,6 +15,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* serve per lo scroll smooth */
 html {
   scroll-behavior: smooth;
@@ -30,6 +34,7 @@ img {
 body {
   font-size: 18px; /* dimensione font di default*/
   font-family: "Lexend", sans-serif; /* assegnamo font family */
+  color: #00004f;
 }
 
 /* global */
@@ -56,6 +61,12 @@ body {
 
 /* al passaggio del mouse sull'elemento button cambiamo colore e sfondo */
 .button:hover {
+  background-color: #f7f7f7;
+  color: #00004f;
+}
+
+.button.light {
+  border: 1px solid #f7f7f7;
   background-color: #f7f7f7;
   color: #00004f;
 }
@@ -135,7 +146,7 @@ h6 {
 /* HERO */
 .hero {
   width: 100%; /* larghezza piena */
-  height: 100vh; /* altezza piena espressa in viewport height */
+  min-height: 100vh; /* altezza piena espressa in viewport height */
   background-color: #00004f; /* colore di sfondo della sezione hero */
 }
 
@@ -146,7 +157,7 @@ h6 {
   justify-content: space-between; /* allineamento orizzontale con spazio centrale */
   flex-wrap: wrap; /* andiamo "a capo" se gli elementi non entrano nello spazio */
   height: 100%; /* altezza piena, prende il valore 100vh assegnato a .hero */
-  padding-top: 60px; /* spazio superiore, utile per mobile (azzeriamo il valore se necessario nelle media query) */
+  padding-top: 80px; /* spazio superiore, utile per mobile (azzeriamo il valore se necessario nelle media query) */
 }
 
 /* contenitore contenuto testuale sezione hero */
@@ -204,6 +215,56 @@ h6 {
 }
 /* END HERO */
 
+/* INTRO */
+.intro {
+  position: relative;
+  width: 100%;
+  color: #00004f;
+  background-color: #56cfe1;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.intro-wrapper {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-title {
+  margin-bottom: 20px;
+}
+
+.intro-description {
+  margin-bottom: 20px;
+}
+
+.intro-image {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .intro-image {
+    display: block;
+  }
+}
+
+/* END INTRO */
+
 /* SERVICES */
 .services {
   width: 100%; /* larghezza piena sezione services  */
@@ -221,6 +282,7 @@ h6 {
 .services-text {
   width: 100%; /* larghezza piena del contenuto testuale per mobile, modifichiamo il valore per altri dispositivi nelle media query */
   padding: 20px; /* spazio interno top, right, bottom e left di 20px */
+  color: #00004f;
 }
 
 .services-image {
@@ -246,3 +308,114 @@ h6 {
   }
 }
 /* END SERVICES */
+
+/* BLOG */
+.blog {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  width: 100%;
+  background-color: #56cfe1;
+}
+
+.blog-title {
+  margin-bottom: 20px;
+}
+
+.blog-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-image:hover {
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 0px;
+}
+
+.card-image:hover img {
+  transform: scale(1.1);
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-content {
+  position: relative;
+  padding: 20px 12px 80px;
+  color: #00004f;
+}
+
+.card-title {
+  margin-bottom: 16px;
+  font-size: 26px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    width: calc(33.33% - 10px);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .card {
+    width: calc(25% - 10px);
+  }
+}
+
+/* END BLOG */
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #00004f;
+  color: #f7f7f7;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* END FOOTER */
